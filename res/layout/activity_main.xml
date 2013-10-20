@@ -1,0 +1,254 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TableLayout
+        android:id="@+id/MainTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:shrinkColumns="*"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:id="@+id/SourceStation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/labelSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Statie plecare"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/dropDownSoruce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:prompt="@string/select" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/DestinationStation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/labelDestination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Statie sosire"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/dropDownDestination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:prompt="@string/select" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/GoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/btnGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="alertMeYouBastard"
+                android:text="@string/button_label" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Time1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/labelTime1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="primul metrou soseste in:"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtboxTime1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </TextView>
+        </TableRow>
+        <!-- al doilea timp -->
+
+        <TableRow
+            android:id="@+id/Time2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/labelTime2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="al doilea metrou soseste in:"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtboxTime2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </TextView>
+        </TableRow>
+
+        <!-- RATB plecare: -->
+
+        <TableRow
+            android:id="@+id/RATB1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/labelRATB1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="12dp"
+                android:text="RATB plecare:"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </TextView>
+        </TableRow>
+
+        <!-- RATB sosire -->
+
+        <TableRow
+            android:id="@+id/RATB2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/labelRATB2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="12dp"
+                android:text="RATB sosire:"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </TextView>
+        </TableRow>
+
+        <!-- POI around departure: -->
+
+        <TableRow
+            android:id="@+id/POI1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/labelPOI1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="14dp"
+                android:text="POI around departure:"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </TextView>
+
+            <ListView
+                android:id="@+id/listPOI1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </ListView>
+        </TableRow>
+
+        <!-- POI around destination: -->
+
+        <TableRow
+            android:id="@+id/POI2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/labelPOI2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="14dp"
+                android:text="POI around destination:"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </TextView>
+
+            <ListView
+                android:id="@+id/listPOI2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:typeface="serif" >
+            </ListView>
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>
